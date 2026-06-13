@@ -1,0 +1,97 @@
+name: Zoho Sign Plans and Pricing
+description: Pricing plans for Zoho Sign electronic signature platform
+url: https://www.zoho.com/sign/pricing.html
+plans:
+
+  - name: Free
+    description: Basic electronic signature plan for individual users
+    price: 0
+    currency: USD
+    billing_period: monthly
+    unit: per user
+    features:
+      - 1 user
+      - 5 envelopes per month
+      - Signature workflows
+      - Automated reminders
+      - Audit trail
+      - Cloud storage import and export
+      - Mobile and desktop apps
+
+  - name: Standard
+    description: Team plan with expanded envelope limits and integrations
+    price: 10
+    currency: USD
+    billing_period: monthly
+    unit: per user
+    billing_note: Billed annually; $12/user/month if billed monthly
+    features:
+      - Everything in Free
+      - 25 envelopes per user per month
+      - Approval workflows
+      - SMS delivery
+      - Non-Zoho DSC support
+      - Recipient authentication
+      - Witness signing
+      - Delegate signing
+      - Custom roles
+      - Priority support
+      - Zoho integrations
+
+  - name: Professional
+    description: Unlimited envelopes with branding and advanced features
+    price: 16
+    currency: USD
+    billing_period: monthly
+    unit: per user
+    billing_note: Billed annually
+    features:
+      - Everything in Standard
+      - Unlimited envelopes
+      - Unlimited templates
+      - Branding and customization
+      - Signer attachments
+      - Multi-language support
+      - Reports and analytics
+
+  - name: Enterprise
+    description: Full-featured plan with API access, bulk send, and compliance tools
+    price: 22
+    currency: USD
+    billing_period: monthly
+    unit: per user
+    billing_note: Billed annually; includes complimentary API credits (50/user/month, capped at 2,500 org-wide)
+    features:
+      - Everything in Professional
+      - Bulk send and bulk sign
+      - SignForms
+      - In-person signing
+      - Signer groups
+      - Custom fields
+      - Payment collection
+      - 21 CFR Part 11 compliance
+      - QES (Qualified Electronic Signatures)
+      - Blockchain timestamping
+      - Automatic backup
+      - Custom SMTP
+      - White label
+      - REST APIs and webhooks
+      - SDKs
+      - 50 complimentary API credits per user per month
+
+  - name: API Plan
+    description: Pay-as-you-go per-envelope pricing with full Enterprise API access
+    price_model: per_envelope
+    billing_note: No monthly or annual commitment; charged per envelope sent
+    features:
+      - All Enterprise features via API
+      - No seat-based subscription
+      - REST APIs and webhooks
+      - SDKs
+      - Embedded signing
+      - Custom branding
+      - Bulk send
+
+notes:
+  - Custom pricing available for high-volume automated workflows; contact Zoho sales
+  - API credits allow automated envelope sends beyond the base plan allotment

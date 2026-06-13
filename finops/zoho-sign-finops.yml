@@ -1,0 +1,72 @@
+name: Zoho Sign FinOps
+description: Financial operations guidance for managing Zoho Sign API costs and usage
+url: https://www.zoho.com/sign/pricing.html
+
+billing_models:
+
+  - name: Subscription (Per User Per Month)
+    description: Predictable seat-based billing; best for teams with steady envelope volumes
+    plans:
+      - name: Free
+        cost: $0/user/month
+        envelope_allotment: 5 envelopes/month total
+      - name: Standard
+        cost: $10/user/month (annual) or $12/user/month (monthly)
+        envelope_allotment: 25 envelopes/user/month
+      - name: Professional
+        cost: $16/user/month (annual)
+        envelope_allotment: Unlimited
+      - name: Enterprise
+        cost: $22/user/month (annual)
+        envelope_allotment: Unlimited + 50 API credits/user/month (max 2,500 org-wide)
+
+  - name: API / Per-Envelope
+    description: Usage-based billing with no seat commitment; best for automated workflows or variable volume
+    unit: per envelope
+    note: Contact Zoho Sales for per-envelope rates; no minimum monthly commitment
+
+cost_optimization:
+
+  - recommendation: Use the Enterprise plan if your API usage is below 2,500 envelopes per month org-wide; complimentary credits may cover the full usage
+    rationale: Enterprise plan includes 50 API credits per user per month (capped at 2,500) effectively reducing per-envelope cost to zero within that range
+
+  - recommendation: Switch to the API/per-envelope plan for burst or highly variable workloads
+    rationale: Avoids paying for unused seats during low-volume periods; scales automatically with actual usage
+
+  - recommendation: Use testing=true parameter during development to avoid consuming production envelope quota
+    rationale: Testing mode allows up to 50 free test envelopes per month without affecting billing
+
+  - recommendation: Batch document sends where possible to stay within 50 API calls per minute rate limit
+    rationale: Efficient batching reduces the chance of hitting rate limits, which could require retry logic and increase latency and cost
+
+  - recommendation: Reuse templates instead of uploading documents per request
+    rationale: Template-based sending reduces payload size and processing time, lowering API call overhead
+
+  - recommendation: Monitor API credit consumption via audit trail and usage reports
+    rationale: Enterprise plan reports help identify over- or under-utilization and inform plan right-sizing
+
+cost_drivers:
+
+  - driver: Number of users (seat-based plans)
+    impact: Linear cost increase with each added seat on Standard, Professional, or Enterprise
+
+  - driver: Envelope volume
+    impact: Exceeding per-plan allotments triggers API credit charges or requires plan upgrade
+
+  - driver: API call frequency
+    impact: High-frequency automation near the 50 calls/minute threshold may require throttling logic to avoid errors
+
+  - driver: Bulk send campaigns
+    impact: Bulk sends (up to 1,000 recipients per request) consume multiple envelope credits in a single operation
+
+observability:
+
+  - tool: Zoho Sign Audit Trail
+    description: Tracks all document events; useful for verifying envelope consumption and signing status
+
+  - tool: Zoho Sign Reports (Professional and above)
+    description: Aggregated usage data to monitor envelope and template activity across the organization
+
+  - tool: Zoho Status Page
+    url: https://status.zoho.com/
+    description: Real-time health and availability monitoring for all Zoho services including Zoho Sign

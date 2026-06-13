@@ -1,0 +1,120 @@
+name: Zoho Sign API Rate Limits
+description: Rate limits and API call quotas for the Zoho Sign REST API
+url: https://www.zoho.com/sign/api/api-limitations.html
+
+rate_limits:
+
+  - name: General API Calls
+    description: Maximum number of API requests per minute for most endpoints
+    limit: 50
+    unit: calls per minute
+    scope: per account
+
+  - name: Template Exports
+    description: Maximum number of template export operations per minute
+    limit: 2
+    unit: calls per minute
+    scope: per account
+
+  - name: Template Imports
+    description: Maximum number of template import operations per minute
+    limit: 1
+    unit: calls per minute
+    scope: per account
+
+  - name: Testing Envelopes
+    description: Envelopes sent per month when using testing=true parameter
+    limit: 50
+    unit: envelopes per month
+    scope: per account
+    note: For development and testing purposes only
+
+  - name: Pagination
+    description: Default number of items returned per paginated response
+    limit: 100
+    unit: items per page
+    note: Controlled via start_index and row_count parameters
+
+document_constraints:
+
+  - name: Recipients Per Request
+    limit: 25
+    unit: recipients
+
+  - name: Documents Per Request
+    limit: 40
+    unit: documents
+
+  - name: Maximum Envelope Size
+    limit: 40
+    unit: MB
+
+  - name: Individual Document Size
+    limit: 25
+    unit: MB
+
+  - name: Bulk Send Recipients
+    limit: 1000
+    unit: recipients per request
+
+  - name: Attachment Size
+    limit: 25
+    unit: MB per request
+
+  - name: Total Fields Per Envelope
+    limit: 2000
+    unit: fields
+
+signer_field_limits:
+
+  - name: Checkboxes
+    limit: 2000
+    unit: per recipient
+
+  - name: Text Fields
+    limit: 750
+    unit: per recipient
+
+  - name: Date Fields
+    limit: 500
+    unit: per recipient
+
+  - name: Image Fields (signatures, initials, stamps)
+    limit: 300
+    unit: per recipient
+
+  - name: Radio Buttons
+    limit: 500
+    unit: per recipient
+
+  - name: Dropdowns
+    limit: 500
+    unit: per recipient
+
+  - name: Attachments
+    limit: 20
+    unit: per recipient
+
+  - name: Payment Fields
+    limit: 1
+    unit: per request
+
+  - name: Dropdown Values
+    limit: 100
+    unit: per dropdown
+
+  - name: Radio Group Sub-fields
+    limit: 100
+    unit: per group
+
+token_limits:
+
+  - name: Access Token Expiry
+    description: OAuth 2.0 access tokens expire after one hour
+    value: 1 hour
+
+  - name: Refresh Tokens Per User
+    description: Maximum number of active refresh tokens per user
+    limit: 20
+    unit: tokens per user
+    note: Generating a new token on re-consent creates a new refresh token; old tokens are invalidated after limit is reached

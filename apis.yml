@@ -1,0 +1,80 @@
+aid: zoho-sign
+name: Zoho Sign
+description: >-
+  Zoho Sign is a cloud-based electronic signature platform that provides a REST
+  API for sending documents for signature, managing templates, tracking signing
+  status, and automating signature workflows. The API supports OAuth 2.0
+  authentication and enables developers to create envelopes, manage recipients,
+  configure signing fields, trigger bulk sends, and retrieve audit trails
+  programmatically. Over 25,000 envelopes are sent daily through Zoho Sign APIs,
+  covering use cases from simple document signing to embedded signing, in-person
+  signing, and enterprise compliance workflows including 21 CFR Part 11 and QES.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/zoho-sign/refs/heads/main/apis.yml
+created: 2026-06-13
+modified: 2026-06-13
+specificationVersion: "0.19"
+tags:
+  - Electronic Signatures
+  - eSignature
+  - Document Management
+  - Digital Signatures
+  - Signature Workflows
+  - Templates
+  - Compliance
+
+apis:
+  - name: Zoho Sign API
+    description: >-
+      REST API for the Zoho Sign electronic signature platform, enabling
+      programmatic creation and management of signature envelopes, document
+      templates, recipient workflows, signing fields, and audit trails.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://www.zoho.com/sign/api/
+    baseURL: https://sign.zoho.com/api/v1
+    tags:
+      - Electronic Signatures
+      - eSignature
+      - Document Management
+      - Templates
+      - Workflows
+    properties:
+      - type: Documentation
+        url: https://www.zoho.com/sign/api/introduction.html
+      - type: OpenAPI
+        url: https://www.postman.com/zohosign/zoho-sign-api/documentation/71s1xhr/zoho-sign-api
+      - type: Authentication
+        url: https://www.zoho.com/sign/api/oauth.html
+      - type: GettingStarted
+        url: https://www.zoho.com/sign/api/getting-started.html
+      - type: Limitations
+        url: https://www.zoho.com/sign/api/api-limitations.html
+
+common:
+  - type: Website
+    url: https://www.zoho.com/sign/
+  - type: Documentation
+    url: https://www.zoho.com/sign/api/introduction.html
+  - type: GitHubOrg
+    url: https://github.com/zoho
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/zohosign
+  - type: Blog
+    url: https://www.zoho.com/blog/sign/
+  - type: Pricing
+    url: https://www.zoho.com/sign/pricing.html
+  - type: StatusPage
+    url: https://status.zoho.com/
+  - type: X
+    url: https://twitter.com/ZohoSign
+  - type: Plans
+    url: plans/zoho-sign-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/zoho-sign-rate-limits.yml
+  - type: FinOps
+    url: finops/zoho-sign-finops.yml
+
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

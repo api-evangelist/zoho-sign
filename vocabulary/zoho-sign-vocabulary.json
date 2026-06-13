@@ -1,0 +1,83 @@
+{
+  "title": "Zoho Sign API Vocabulary",
+  "description": "Domain vocabulary and terminology for the Zoho Sign electronic signature API",
+  "version": "1.0",
+  "source": "https://www.zoho.com/sign/api/",
+  "terms": [
+    {
+      "term": "Request",
+      "definition": "A document or set of documents sent for signature collection. Also called an envelope. Contains recipients, signing fields, and tracks the overall signing status.",
+      "synonyms": ["envelope", "document request", "signing request"]
+    },
+    {
+      "term": "Action",
+      "definition": "A signing task assigned to a specific recipient within a request. Each action has a type (SIGN, VIEW, APPROVE, INPERSONSIGN) and tracks the recipient's progress.",
+      "synonyms": ["signing action", "recipient action"]
+    },
+    {
+      "term": "Template",
+      "definition": "A reusable document configuration with predefined fields and recipient roles that can be used to generate new signing requests without re-uploading documents.",
+      "synonyms": ["document template", "signing template"]
+    },
+    {
+      "term": "Field",
+      "definition": "A designated area in a document where a recipient must provide input, such as a signature, initials, date, name, or other text information.",
+      "synonyms": ["document field", "form field", "signing field"]
+    },
+    {
+      "term": "Recipient",
+      "definition": "A person who receives a document for signing or viewing. Identified by name and email address and assigned a specific action type.",
+      "synonyms": ["signer", "approver"]
+    },
+    {
+      "term": "Sequential Signing",
+      "definition": "A signing workflow where recipients must sign in a specified order. The next recipient only receives the document after the previous one completes their action.",
+      "synonyms": ["ordered signing", "sequential workflow"]
+    },
+    {
+      "term": "Parallel Signing",
+      "definition": "A signing workflow where all recipients receive the document simultaneously and can sign in any order.",
+      "synonyms": ["simultaneous signing", "parallel workflow"]
+    },
+    {
+      "term": "Audit Trail",
+      "definition": "A chronological record of all actions taken on a document, including who viewed, signed, or declined it and when, used for legal compliance.",
+      "synonyms": ["audit log", "signing audit", "history"]
+    },
+    {
+      "term": "Embedded Signing",
+      "definition": "A signing experience embedded directly within a third-party application via an iframe or redirect, allowing signers to sign without leaving the host application.",
+      "synonyms": ["in-app signing", "embedded signer"]
+    },
+    {
+      "term": "In-Person Signing",
+      "definition": "A signing workflow where a facilitator collects signatures from signers who are physically present, using the same device.",
+      "synonyms": ["in-person signer", "kiosk signing"]
+    },
+    {
+      "term": "QES",
+      "definition": "Qualified Electronic Signature — the highest level of electronic signature under the EU eIDAS regulation, with the same legal standing as a handwritten signature.",
+      "synonyms": ["qualified electronic signature", "qualified signature"]
+    },
+    {
+      "term": "21 CFR Part 11",
+      "definition": "FDA regulation governing electronic records and electronic signatures in the pharmaceutical and life sciences industries. Zoho Sign supports compliant workflows.",
+      "synonyms": ["CFR Part 11", "FDA compliance"]
+    },
+    {
+      "term": "OAuth 2.0",
+      "description": "The authentication protocol used by Zoho Sign API. Requires obtaining access tokens via Zoho Accounts using authorization code or self-client flows.",
+      "synonyms": ["OAuth", "access token"]
+    },
+    {
+      "term": "Bulk Send",
+      "definition": "A feature to send the same document to multiple recipients simultaneously, creating individual requests for each recipient from a single action.",
+      "synonyms": ["bulk signing", "mass send"]
+    },
+    {
+      "term": "Recall",
+      "definition": "The action of canceling or revoking an in-progress document request before all recipients have completed their actions.",
+      "synonyms": ["cancel request", "revoke request"]
+    }
+  ]
+}

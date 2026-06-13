@@ -1,0 +1,68 @@
+{
+  "title": "List Templates",
+  "description": "Example response for listing Zoho Sign document templates",
+  "endpoint": "GET /api/v1/templates",
+  "response": {
+    "code": 0,
+    "templates": [
+      {
+        "template_id": "2000000012345",
+        "template_name": "Standard NDA Template",
+        "description": "Non-disclosure agreement for new vendors and partners",
+        "created_time": 1715644800000,
+        "owner_id": "1000000012345",
+        "folder_name": "Legal",
+        "document_fields": [
+          {
+            "field_name": "party_name",
+            "field_type": "Text",
+            "field_label": "Party Name",
+            "is_mandatory": true
+          },
+          {
+            "field_name": "party_signature",
+            "field_type": "Signature",
+            "field_label": "Signature",
+            "is_mandatory": true
+          }
+        ]
+      },
+      {
+        "template_id": "2000000012346",
+        "template_name": "Employee Offer Letter",
+        "description": "Offer letter template for new employee onboarding",
+        "created_time": 1715558400000,
+        "owner_id": "1000000012345",
+        "folder_name": "HR",
+        "document_fields": [
+          {
+            "field_name": "employee_name",
+            "field_type": "Text",
+            "field_label": "Employee Name",
+            "is_mandatory": true
+          },
+          {
+            "field_name": "employee_signature",
+            "field_type": "Signature",
+            "field_label": "Signature",
+            "is_mandatory": true
+          },
+          {
+            "field_name": "start_date",
+            "field_type": "Date Signed",
+            "field_label": "Start Date",
+            "is_mandatory": false
+          }
+        ]
+      }
+    ],
+    "page_context": {
+      "row_count": 10,
+      "start_index": 1,
+      "total": 2,
+      "has_more_rows": false
+    },
+    "message": "Templates fetched successfully",
+    "status": "success"
+  }
+}

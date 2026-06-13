@@ -1,0 +1,44 @@
+{
+  "title": "List Document Requests",
+  "description": "Example response for listing Zoho Sign document requests",
+  "endpoint": "GET /api/v1/requests",
+  "query_parameters": {
+    "row_count": 10,
+    "start_index": 1,
+    "sort_column": "created_time",
+    "sort_order": "DESC"
+  },
+  "response": {
+    "code": 0,
+    "requests": [
+      {
+        "request_id": "3000000012345",
+        "request_name": "Sales Contract - Acme Corp",
+        "request_status": "inprogress",
+        "owner_id": "1000000012345",
+        "owner_email": "sender@example.com",
+        "created_time": 1718236800000,
+        "expiration_days": 10,
+        "is_sequential": true
+      },
+      {
+        "request_id": "3000000012346",
+        "request_name": "NDA Agreement - Beta Ltd",
+        "request_status": "completed",
+        "owner_id": "1000000012345",
+        "owner_email": "sender@example.com",
+        "created_time": 1718150400000,
+        "expiration_days": 7,
+        "is_sequential": false
+      }
+    ],
+    "page_context": {
+      "row_count": 10,
+      "start_index": 1,
+      "total": 2,
+      "has_more_rows": false
+    },
+    "message": "Requests fetched successfully",
+    "status": "success"
+  }
+}

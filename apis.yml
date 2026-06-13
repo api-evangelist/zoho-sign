@@ -43,7 +43,7 @@ apis:
       - type: Documentation
         url: https://www.zoho.com/sign/api/introduction.html
       - type: OpenAPI
-        url: https://www.postman.com/zohosign/zoho-sign-api/documentation/71s1xhr/zoho-sign-api
+        url: https://raw.githubusercontent.com/api-evangelist/zoho-sign/refs/heads/main/openapi/openapi.json
       - type: Authentication
         url: https://www.zoho.com/sign/api/oauth.html
       - type: GettingStarted

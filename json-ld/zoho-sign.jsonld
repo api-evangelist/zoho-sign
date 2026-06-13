@@ -1,0 +1,159 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "zoho": "https://www.zoho.com/sign/api/#",
+    "sign": "https://raw.githubusercontent.com/api-evangelist/zoho-sign/main/json-ld/zoho-sign.jsonld#",
+    "openapi": "https://openapis.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "sign:ZohoSignAPI",
+      "@type": "WebAPI",
+      "name": "Zoho Sign API",
+      "description": "Digital signature API for sending, signing, and managing documents via the Zoho Sign platform.",
+      "url": "https://www.zoho.com/sign/api/",
+      "documentation": "https://www.zoho.com/sign/api/introduction.html",
+      "provider": {
+        "@type": "Organization",
+        "name": "Zoho Corporation",
+        "url": "https://www.zoho.com/"
+      },
+      "termsOfService": "https://www.zoho.com/sign/terms.html",
+      "version": "1.0",
+      "endpointUrl": "https://sign.zoho.com/api/v1"
+    },
+    {
+      "@id": "sign:Request",
+      "@type": "Class",
+      "name": "Request",
+      "description": "A document request (envelope) sent through Zoho Sign for electronic signature collection.",
+      "subClassOf": "Action",
+      "properties": [
+        {
+          "@id": "sign:requestId",
+          "@type": "Property",
+          "name": "request_id",
+          "description": "Unique identifier for the document request",
+          "rangeIncludes": {"@id": "xsd:string"}
+        },
+        {
+          "@id": "sign:requestName",
+          "@type": "Property",
+          "name": "request_name",
+          "description": "Human-readable name of the document request",
+          "rangeIncludes": {"@id": "xsd:string"}
+        },
+        {
+          "@id": "sign:requestStatus",
+          "@type": "Property",
+          "name": "request_status",
+          "description": "Current status of the signing request",
+          "rangeIncludes": {"@id": "xsd:string"}
+        },
+        {
+          "@id": "sign:isSequential",
+          "@type": "Property",
+          "name": "is_sequential",
+          "description": "Whether signing follows a sequential order among recipients",
+          "rangeIncludes": {"@id": "xsd:boolean"}
+        }
+      ]
+    },
+    {
+      "@id": "sign:Template",
+      "@type": "Class",
+      "name": "Template",
+      "description": "A reusable document template with predefined fields and recipient roles in Zoho Sign.",
+      "properties": [
+        {
+          "@id": "sign:templateId",
+          "@type": "Property",
+          "name": "template_id",
+          "description": "Unique identifier for the template",
+          "rangeIncludes": {"@id": "xsd:string"}
+        },
+        {
+          "@id": "sign:templateName",
+          "@type": "Property",
+          "name": "template_name",
+          "description": "Name of the document template",
+          "rangeIncludes": {"@id": "xsd:string"}
+        }
+      ]
+    },
+    {
+      "@id": "sign:Action",
+      "@type": "Class",
+      "name": "Action",
+      "description": "A signing or viewing action assigned to a recipient within a Zoho Sign request.",
+      "properties": [
+        {
+          "@id": "sign:actionType",
+          "@type": "Property",
+          "name": "action_type",
+          "description": "Type of action: SIGN, VIEW, APPROVE, or INPERSONSIGN",
+          "rangeIncludes": {"@id": "xsd:string"}
+        },
+        {
+          "@id": "sign:recipientEmail",
+          "@type": "Property",
+          "name": "recipient_email",
+          "sameAs": "email",
+          "description": "Email address of the action recipient",
+          "rangeIncludes": {"@id": "xsd:string"}
+        },
+        {
+          "@id": "sign:signingOrder",
+          "@type": "Property",
+          "name": "signing_order",
+          "description": "Sequential order in which this recipient should complete their action",
+          "rangeIncludes": {"@id": "xsd:integer"}
+        }
+      ]
+    },
+    {
+      "@id": "sign:Field",
+      "@type": "Class",
+      "name": "Field",
+      "description": "A form field within a Zoho Sign document where recipients provide input.",
+      "properties": [
+        {
+          "@id": "sign:fieldType",
+          "@type": "Property",
+          "name": "field_type",
+          "description": "Type of field: Signature, Initials, Date Signed, Name, Email, Text, Checkbox, etc.",
+          "rangeIncludes": {"@id": "xsd:string"}
+        },
+        {
+          "@id": "sign:isMandatory",
+          "@type": "Property",
+          "name": "is_mandatory",
+          "description": "Whether the field must be filled before the document can be submitted",
+          "rangeIncludes": {"@id": "xsd:boolean"}
+        }
+      ]
+    },
+    {
+      "@id": "sign:OAuthSecurity",
+      "@type": "Class",
+      "name": "OAuth2 Security",
+      "description": "OAuth 2.0 authentication used to secure Zoho Sign API requests.",
+      "sameAs": "https://schema.org/accessCode",
+      "properties": [
+        {
+          "@id": "sign:authorizationUrl",
+          "name": "authorization_url",
+          "description": "URL for initiating OAuth 2.0 authorization code flow",
+          "value": "https://accounts.zoho.com/oauth/v2/auth"
+        },
+        {
+          "@id": "sign:tokenUrl",
+          "name": "token_url",
+          "description": "URL for exchanging authorization code for access token",
+          "value": "https://accounts.zoho.com/oauth/v2/token"
+        }
+      ]
+    }
+  ]
+}

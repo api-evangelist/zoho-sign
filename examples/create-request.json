@@ -1,0 +1,61 @@
+{
+  "title": "Create Document Request",
+  "description": "Example request body for creating a new Zoho Sign document request",
+  "endpoint": "POST /api/v1/requests",
+  "request": {
+    "requests": {
+      "request_name": "Sales Contract - Acme Corp",
+      "expiration_days": 10,
+      "is_sequential": true,
+      "reminder_period": 5,
+      "notes": "Please review and sign the attached sales contract.",
+      "actions": [
+        {
+          "action_type": "SIGN",
+          "recipient_name": "Jane Doe",
+          "recipient_email": "jane.doe@acmecorp.com",
+          "signing_order": 0,
+          "fields": [
+            {
+              "field_label": "Signature",
+              "field_type": "Signature",
+              "is_mandatory": true,
+              "field_name": "client_signature",
+              "abs_width": 150,
+              "abs_height": 40,
+              "x_coord": 300,
+              "y_coord": 600,
+              "page_no": 1
+            },
+            {
+              "field_label": "Date",
+              "field_type": "Date Signed",
+              "is_mandatory": true,
+              "field_name": "sign_date",
+              "abs_width": 100,
+              "abs_height": 20,
+              "x_coord": 300,
+              "y_coord": 650,
+              "page_no": 1
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "response": {
+    "code": 0,
+    "requests": {
+      "request_id": "3000000012345",
+      "request_name": "Sales Contract - Acme Corp",
+      "request_status": "inprogress",
+      "owner_id": "1000000012345",
+      "owner_email": "sender@example.com",
+      "created_time": 1718236800000,
+      "expiration_days": 10,
+      "is_sequential": true
+    },
+    "message": "Request created successfully",
+    "status": "success"
+  }
+}

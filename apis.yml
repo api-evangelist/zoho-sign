@@ -10,7 +10,7 @@ description: >-
   covering use cases from simple document signing to embedded signing, in-person
   signing, and enterprise compliance workflows including 21 CFR Part 11 and QES.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/zoho-sign/refs/heads/main/apis.yml
 created: 2026-06-13
 modified: 2026-06-13
@@ -30,7 +30,7 @@ apis:
       REST API for the Zoho Sign electronic signature platform, enabling
       programmatic creation and management of signature envelopes, document
       templates, recipient workflows, signing fields, and audit trails.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.zoho.com/sign/api/
     baseURL: https://sign.zoho.com/api/v1
     tags:

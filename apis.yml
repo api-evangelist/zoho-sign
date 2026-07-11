@@ -52,6 +52,10 @@ apis:
         url: https://www.zoho.com/sign/api/api-limitations.html
 
 common:
+  - type: Authentication
+    url: authentication/zoho-sign-authentication.yml
+  - type: OAuthScopes
+    url: scopes/zoho-sign-scopes.yml
   - type: Website
     url: https://www.zoho.com/sign/
   - type: Documentation

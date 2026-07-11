@@ -1,0 +1,29 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/openapi.json
+schemes:
+- name: oauth2
+  source: openapi/openapi.json
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://accounts.zoho.com/oauth/v2/auth
+    tokenUrl: https://accounts.zoho.com/oauth/v2/token
+scopes:
+- scope: ZohoSign.account.ALL
+  description: Account operations
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/openapi.json
+- scope: ZohoSign.documents.ALL
+  description: All document operations
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/openapi.json
+- scope: ZohoSign.templates.ALL
+  description: All template operations
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/openapi.json

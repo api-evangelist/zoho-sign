@@ -52,6 +52,8 @@ apis:
         url: https://www.zoho.com/sign/api/api-limitations.html
 
 common:
+  - type: AgenticAccess
+    url: agentic-access/zoho-sign-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/zoho-sign-vulnerability-disclosure.yml
   - type: DomainSecurity

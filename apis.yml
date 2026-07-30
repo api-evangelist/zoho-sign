@@ -10,7 +10,20 @@ description: >-
   covering use cases from simple document signing to embedded signing, in-person
   signing, and enterprise compliance workflows including 21 CFR Part 11 and QES.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/zoho-sign.png
 url: https://raw.githubusercontent.com/api-evangelist/zoho-sign/refs/heads/main/apis.yml
 created: 2026-06-13
 modified: 2026-06-13
@@ -25,32 +38,78 @@ tags:
   - Compliance
 
 apis:
-  - name: Zoho Sign API
-    description: >-
-      REST API for the Zoho Sign electronic signature platform, enabling
-      programmatic creation and management of signature envelopes, document
-      templates, recipient workflows, signing fields, and audit trails.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://www.zoho.com/sign/api/
-    baseURL: https://sign.zoho.com/api/v1
-    tags:
-      - Electronic Signatures
-      - eSignature
-      - Document Management
-      - Templates
-      - Workflows
-    properties:
-      - type: Documentation
-        url: https://www.zoho.com/sign/api/introduction.html
-      - type: OpenAPI
-        url: https://raw.githubusercontent.com/api-evangelist/zoho-sign/refs/heads/main/openapi/openapi.json
-      - type: Authentication
-        url: https://www.zoho.com/sign/api/oauth.html
-      - type: GettingStarted
-        url: https://www.zoho.com/sign/api/getting-started.html
-      - type: Limitations
-        url: https://www.zoho.com/sign/api/api-limitations.html
-
+- aid: zoho-sign:zoho-sign-accounts-api
+  name: Zoho Sign Accounts API
+  description: The Accounts API from Zoho Sign — 1 operation(s) for accounts.
+  humanURL: https://www.zoho.com/sign/api/
+  baseURL: https://sign.zoho.com/api/v1
+  tags:
+  - Accounts
+  properties:
+  - type: OpenAPI
+    url: openapi/zoho-sign-accounts-api-openapi.yml
+  - type: Documentation
+    url: https://www.zoho.com/sign/api/introduction.html
+  - type: Authentication
+    url: https://www.zoho.com/sign/api/oauth.html
+  - type: GettingStarted
+    url: https://www.zoho.com/sign/api/getting-started.html
+  - type: Limitations
+    url: https://www.zoho.com/sign/api/api-limitations.html
+- aid: zoho-sign:zoho-sign-requests-api
+  name: Zoho Sign Requests API
+  description: The Requests API from Zoho Sign — 2 operation(s) for requests.
+  humanURL: https://www.zoho.com/sign/api/
+  baseURL: https://sign.zoho.com/api/v1
+  tags:
+  - Requests
+  properties:
+  - type: OpenAPI
+    url: openapi/zoho-sign-requests-api-openapi.yml
+  - type: Documentation
+    url: https://www.zoho.com/sign/api/introduction.html
+  - type: Authentication
+    url: https://www.zoho.com/sign/api/oauth.html
+  - type: GettingStarted
+    url: https://www.zoho.com/sign/api/getting-started.html
+  - type: Limitations
+    url: https://www.zoho.com/sign/api/api-limitations.html
+- aid: zoho-sign:zoho-sign-templates-api
+  name: Zoho Sign Templates API
+  description: The Templates API from Zoho Sign — 2 operation(s) for templates.
+  humanURL: https://www.zoho.com/sign/api/
+  baseURL: https://sign.zoho.com/api/v1
+  tags:
+  - Templates
+  properties:
+  - type: OpenAPI
+    url: openapi/zoho-sign-templates-api-openapi.yml
+  - type: Documentation
+    url: https://www.zoho.com/sign/api/introduction.html
+  - type: Authentication
+    url: https://www.zoho.com/sign/api/oauth.html
+  - type: GettingStarted
+    url: https://www.zoho.com/sign/api/getting-started.html
+  - type: Limitations
+    url: https://www.zoho.com/sign/api/api-limitations.html
+- aid: zoho-sign:zoho-sign-users-api
+  name: Zoho Sign Users API
+  description: The Users API from Zoho Sign — 1 operation(s) for users.
+  humanURL: https://www.zoho.com/sign/api/
+  baseURL: https://sign.zoho.com/api/v1
+  tags:
+  - Users
+  properties:
+  - type: OpenAPI
+    url: openapi/zoho-sign-users-api-openapi.yml
+  - type: Documentation
+    url: https://www.zoho.com/sign/api/introduction.html
+  - type: Authentication
+    url: https://www.zoho.com/sign/api/oauth.html
+  - type: GettingStarted
+    url: https://www.zoho.com/sign/api/getting-started.html
+  - type: Limitations
+    url: https://www.zoho.com/sign/api/api-limitations.html
 common:
   - type: AgenticAccess
     url: agentic-access/zoho-sign-agentic-access.yml

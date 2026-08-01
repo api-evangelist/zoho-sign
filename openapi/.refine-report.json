@@ -1,0 +1,20 @@
+{
+  "provider": "zoho-sign",
+  "sources": [
+    "zoho-sign-accounts-api-openapi.yml",
+    "zoho-sign-requests-api-openapi.yml",
+    "zoho-sign-templates-api-openapi.yml",
+    "zoho-sign-users-api-openapi.yml"
+  ],
+  "outputs": [
+    "zoho-sign-accounts-api-openapi.yml",
+    "zoho-sign-requests-api-openapi.yml",
+    "zoho-sign-templates-api-openapi.yml",
+    "zoho-sign-users-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

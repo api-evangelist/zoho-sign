@@ -30,6 +30,14 @@ modified: 2026-06-13
 specificationVersion: '0.23'
 tags:
   - Electronic Signatures
+  - E-Signature
+  - Document-Management
+  - Digital Signatures
+  - Signature Workflows
+  - Templates
+  - Compliance
+tags_raw:
+  - Electronic Signatures
   - eSignature
   - Document Management
   - Digital Signatures
@@ -44,6 +52,8 @@ apis:
   humanURL: https://www.zoho.com/sign/api/
   baseURL: https://sign.zoho.com/api/v1
   tags:
+  - Account
+  tags_raw:
   - Accounts
   properties:
   - type: OpenAPI
@@ -98,6 +108,8 @@ apis:
   humanURL: https://www.zoho.com/sign/api/
   baseURL: https://sign.zoho.com/api/v1
   tags:
+  - User
+  tags_raw:
   - Users
   properties:
   - type: OpenAPI

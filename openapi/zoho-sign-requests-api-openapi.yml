@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Zoho Sign Accounts Requests API
+  title: Zoho Sign Requests API
   version: '1.0'
   description: Digital signature API for sending, signing, and managing documents.
   x-jentic-source-url: https://www.zoho.com/sign/api/
@@ -55,7 +55,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
-      description: List document requests
     post:
       operationId: createRequest
       summary: Create document request
@@ -85,7 +84,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
-      description: Create document request
   /requests/{request_id}:
     get:
       operationId: getRequest
@@ -113,7 +111,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
-      description: Get document request
     put:
       operationId: updateRequest
       summary: Update request
@@ -149,7 +146,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
-      description: Update request
     delete:
       operationId: deleteRequest
       summary: Delete request
@@ -176,7 +172,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
-      description: Delete request
 components:
   schemas:
     ErrorResponse:

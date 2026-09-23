@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Zoho Sign Accounts Users API
+  title: Zoho Sign Users API
   version: '1.0'
   description: Digital signature API for sending, signing, and managing documents.
   x-jentic-source-url: https://www.zoho.com/sign/api/
@@ -55,7 +55,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
-      description: List users
 components:
   schemas:
     ErrorResponse:

@@ -1,10 +1,7 @@
 {
   "provider": "zoho-sign",
   "sources": [
-    "zoho-sign-accounts-api-openapi.yml",
-    "zoho-sign-requests-api-openapi.yml",
-    "zoho-sign-templates-api-openapi.yml",
-    "zoho-sign-users-api-openapi.yml"
+    "_original/openapi.json"
   ],
   "outputs": [
     "zoho-sign-accounts-api-openapi.yml",
@@ -16,11 +13,14 @@
   "errors": [],
   "warnings": [],
   "notes": [
-    "zoho-sign-accounts-api-openapi.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
-    "zoho-sign-requests-api-openapi.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
-    "zoho-sign-templates-api-openapi.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
-    "zoho-sign-users-api-openapi.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "openapi.json: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
     "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "zoho-sign-accounts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "zoho-sign-requests-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "zoho-sign-templates-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "zoho-sign-users-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

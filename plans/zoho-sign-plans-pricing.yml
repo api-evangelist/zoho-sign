@@ -99,3 +99,46 @@ plans:
 notes:
   - Custom pricing available for high-volume automated workflows; contact Zoho sales
   - API credits allow automated envelope sends beyond the base plan allotment
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  - seat
+  units:
+  - seat
+  plans:
+  - name: Free
+    access: other
+    model: free
+    model_how: derived
+    units:
+    - seat
+    periods: []
+  - name: Standard
+    access: other
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods: []
+  - name: Professional
+    access: other
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods: []
+  - name: Enterprise
+    access: other
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods: []
+  - name: API Plan
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
